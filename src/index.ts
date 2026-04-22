@@ -5,7 +5,11 @@ const app = express();
 const PORT = 2005;
 
 app.get('/', (req, res) => {
-    return res.send('Hiii......');
+    return res.send('Hiii everyone......');
+})
+
+app.get('/hi',(req,res)=>{
+    return res.send("Hii Asish ");
 })
 
 
