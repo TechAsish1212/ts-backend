@@ -1,5 +1,5 @@
-import express, { Request, Response, Router } from "express";
-import { addBooks, getBooks } from "../controllers/book.controller";
+import  {  Router } from "express";
+import { addBooks, getBooks, updateBook } from "../controllers/book.controller";
 
 
 const bookRouter=Router();
@@ -7,5 +7,6 @@ const bookRouter=Router();
 
 bookRouter.get('/get-book',getBooks);
 bookRouter.post('/add-book',addBooks);
+bookRouter.patch('/update-book/:id',updateBook);
 
 export default bookRouter;
