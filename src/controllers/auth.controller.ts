@@ -127,3 +127,26 @@ export const signin = async (req: Request, res: Response) => {
         })
     }
 }
+
+
+// logout
+export const logout=async(req:Request,res:Response)=>{
+    try {
+
+        res.cookie("token","",{
+            httpOnly:true,
+            expires:new Date(0)
+        })
+
+        return res.status(200).json({
+            success:true,
+            message:"Logout Successfully"
+        })
+
+    } catch (error:any) {
+        return res.status(500).json({
+            success:false,
+            message:"Error performing logout"
+        })
+    }
+}
