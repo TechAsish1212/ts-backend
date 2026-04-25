@@ -6,7 +6,7 @@ interface IUser {
     password: string,
     username: string,
     phone: string,
-    booksAdded: string[],
+    booksAdded?: string[],
     role: string
 }
 
